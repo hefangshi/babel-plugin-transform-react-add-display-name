@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-react-add-display-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "mocha": "^3.4.2",
+    "power-assert": "^1.4.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0"
+  }
+}
