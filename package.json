@@ -1,13 +1,16 @@
 {
   "name": "babel-plugin-react-add-display-name",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "automatic add display name for react component",
+  "main": "src/index.js",
   "scripts": {
     "test": "BABEL_DISABLE_CACHE=1 mocha --compilers js:babel-register"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "hefangshi",
+  "license": "BSD",
+  "repository": {
+    "git": "https://github.com/hefangshi/babel-plugin-react-add-display-name"
+  },
   "dependencies": {
     "babel-runtime": "^6.23.0"
   },
