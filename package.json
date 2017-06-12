@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-register"
+    "test": "BABEL_DISABLE_CACHE=1 mocha --compilers js:babel-register"
   },
   "author": "",
   "license": "ISC",

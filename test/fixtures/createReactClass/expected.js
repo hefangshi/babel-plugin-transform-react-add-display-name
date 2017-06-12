@@ -9,5 +9,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Foo = _react2.default.createClass({
     displayName: 'Foo',
 
-    foo: 'bar'
+    foo: 'bar',
+    render: function render() {
+        return _react2.default.createElement('div', { onClick: this.handleClick });
+    }
 });

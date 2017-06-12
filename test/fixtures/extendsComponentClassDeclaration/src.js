@@ -1,10 +1,9 @@
-import React from 'react';
+import {Component} from 'react';
 
-let Foo = React.createClass({
-    foo: 'bar',
+class Foo extends Component {
     render() {
         return (
         <div onClick={this.handleClick}></div>
         );
     }
-});
+}

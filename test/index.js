@@ -5,7 +5,7 @@ import * as babel from 'babel-core';
 import plugin from '../src/index';
 
 function trim(str) {
-    return str.toString().replace(/^\s+|\s+$/, '');
+  return str.toString().replace(/^\s+|\s+$/, '');
 }
 
 const baseDir = path.join(__dirname, '..');
@@ -15,20 +15,30 @@ const BASE_OPTIONS = {
 };
 
 describe('React.createClass', () => {
-  it('add variable name as displayName', () => {
-    const fixtureDir = path.join(fixturesDir, 'createReactClass');
-    try {
-      const actual = transform(path.join(fixtureDir, 'src.js'), {
-        enforceDescriptions: true,
-      });
-      const expected = fs.readFileSync(path.join(fixtureDir, 'expected.js'));
-      assert.equal(trim(actual), trim(expected));
-    } catch (e) {
-      assert(false);
-    }
+  it('set variable name to displayName', () => {
+    testFixture('createReactClass');
   });
 });
 
+describe('Component', () => {
+  it('set class name to displayName', () => {
+    testFixture('extendsComponentClassDeclaration');
+  });
+});
+
+function testFixture(name) {
+  const fixtureDir = path.join(fixturesDir, name);
+  let multiplePasses = false;
+  do {
+    const actual = transform(path.join(fixtureDir, 'src.js'), {
+      enforceDescriptions: true,
+    }, { multiplePasses });
+    const expected = fs.readFileSync(path.join(fixtureDir, 'expected.js'));
+    assert.equal(trim(actual), trim(expected));
+    if (multiplePasses) break;
+    multiplePasses = true;
+  } while (1)
+}
 
 function transform(filePath, options = {}, { multiplePasses = false } = {}) {
   function getPluginConfig() {
