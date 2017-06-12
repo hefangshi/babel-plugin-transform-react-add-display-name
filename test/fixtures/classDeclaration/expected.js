@@ -22,6 +22,8 @@ var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _react = require('react');
 
+var _react2 = _interopRequireDefault(_react);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Foo = function (_Component) {
@@ -35,7 +37,7 @@ var Foo = function (_Component) {
     (0, _createClass3.default)(Foo, [{
         key: 'render',
         value: function render() {
-            return React.createElement('div', { onClick: this.handleClick });
+            return _react2.default.createElement('div', { onClick: this.handleClick });
         }
     }]);
     return Foo;
