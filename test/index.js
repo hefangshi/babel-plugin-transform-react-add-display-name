@@ -18,6 +18,9 @@ describe('React.createClass', () => {
   it('set variable name to displayName', () => {
     testFixture('createClass');
   });
+  it('set variable name to displayName (react 16+)', () => {
+    testFixture('createReactClass');
+  });
 });
 
 describe('Component', () => {

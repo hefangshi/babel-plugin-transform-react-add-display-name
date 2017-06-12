@@ -79,9 +79,10 @@ function resolveCreateClassCall(t, path) {
   if (t.isVariableDeclarator(path.parent) && t.isIdentifier(path.parent.id)) {
     const variableName = path.parent.id.name;
     const callee = path.get('callee');
-    if (t.isMemberExpression(callee.node) &&
+    if ((t.isMemberExpression(callee.node) &&
       t.isIdentifier(callee.node.object, { name: 'React' }) &&
-      t.isIdentifier(callee.node.property, { name: 'createClass' }) &&
+      t.isIdentifier(callee.node.property, { name: 'createClass' })) ||
+      (t.isIdentifier(callee.node, { name: 'createReactClass' })) &&
       path.node.arguments.length >= 0 &&
       t.isObjectExpression(path.node.arguments[0])) {
       const createClassArg = path.node.arguments[0];
