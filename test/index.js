@@ -16,13 +16,19 @@ const BASE_OPTIONS = {
 
 describe('React.createClass', () => {
   it('set variable name to displayName', () => {
-    testFixture('createReactClass');
+    testFixture('createClass');
   });
 });
 
 describe('Component', () => {
-  it('set class name to displayName', () => {
-    testFixture('extendsComponentClassDeclaration');
+  it('set class name to displayName for react class declaration', () => {
+    testFixture('classDeclaration');
+  });
+  it('set variable name to displayName for anonymous react class expression', () => {
+    testFixture('anonomyClassExpr');
+  });
+  it('set variable name to displayName for named react class expression', () => {
+    testFixture('namedClassExpr');
   });
 });
 
