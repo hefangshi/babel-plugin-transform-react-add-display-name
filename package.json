@@ -7,7 +7,7 @@
     "test": "BABEL_DISABLE_CACHE=1 mocha --compilers js:babel-register"
   },
   "author": "hefangshi",
-  "license": "BSD",
+  "license": "MIT",
   "repository": {
     "git": "https://github.com/hefangshi/babel-plugin-react-add-display-name"
   },
