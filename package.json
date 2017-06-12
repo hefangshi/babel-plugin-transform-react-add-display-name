@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-react-add-display-name",
+  "name": "babel-plugin-transform-react-add-display-name",
   "version": "1.0.0",
   "description": "automatic add display name for react component",
   "main": "src/index.js",
@@ -9,7 +9,7 @@
   "author": "hefangshi",
   "license": "MIT",
   "repository": {
-    "git": "https://github.com/hefangshi/babel-plugin-react-add-display-name"
+    "git": "https://github.com/hefangshi/babel-plugin-transform-react-add-display-name"
   },
   "dependencies": {
     "babel-runtime": "^6.23.0"
